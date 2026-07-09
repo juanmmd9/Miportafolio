@@ -72,6 +72,7 @@ export default function TitlesPricing({ language = 'es' }: TitlesPricingProps) {
 
   const t = translations[language as keyof typeof translations];
   const [selectedPdf, setSelectedPdf] = useState<string | null>(null);
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   return (
     <div>
@@ -93,7 +94,7 @@ export default function TitlesPricing({ language = 'es' }: TitlesPricingProps) {
               {item.description}
             </p>
             <button
-              onClick={() => setSelectedPdf(item.pdf)}
+              onClick={() => setSelectedPdf(`${basePath}${item.pdf}`)}
               className="inline-flex items-center gap-2 text-sm text-blue-300 transition-colors hover:text-blue-200"
             >
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

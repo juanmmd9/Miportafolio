@@ -24,6 +24,10 @@
 .DS_Store
 *.pem
 
+# nested / unrelated local folders
+/HV2025
+/PROYECTOEPI
+
 # debug
 npm-debug.log*
 yarn-debug.log*
