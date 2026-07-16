@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { asset } from '@/lib/asset';
 
 interface HeaderProps {
   onLanguageChange: (lang: string) => void;
@@ -63,7 +64,7 @@ export default function Header({ onLanguageChange }: HeaderProps) {
           >
             <div className="relative h-10 w-10 overflow-hidden rounded-full ring-2 ring-blue-400/60">
               <Image
-                src="/Motor.jpg"
+                src={asset('/Motor.jpg')}
                 alt="Juan Manuel Moncayo"
                 width={40}
                 height={40}

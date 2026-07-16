@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import TitlesPricing from '@/components/TitlesPricing';
+import { asset } from '@/lib/asset';
 
 export default function Home() {
   const [language, setLanguage] = useState('es');
@@ -217,7 +218,7 @@ export default function Home() {
               <div className="absolute -inset-4 rounded-full bg-blue-400/25 blur-2xl" />
               <div className="relative h-56 w-56 overflow-hidden rounded-full ring-4 ring-white/20 md:h-72 md:w-72 lg:h-80 lg:w-80">
                 <Image
-                  src="/Motor.jpg"
+                  src={asset('/Motor.jpg')}
                   alt="Juan Manuel Moncayo Donoso"
                   fill
                   className="object-cover"
@@ -309,7 +310,7 @@ export default function Home() {
             >
               <div className="relative aspect-[16/9] w-full overflow-hidden">
                 <Image
-                  src="/projects/epi-portal.jpg"
+                  src={asset('/projects/epi-portal.jpg')}
                   alt={t.projects.epi.name}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
