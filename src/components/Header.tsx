@@ -55,7 +55,7 @@ export default function Header({ onLanguageChange }: HeaderProps) {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-[#0b1f3a]/95 backdrop-blur-md">
+      <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-[#0a0a0a]/95 backdrop-blur-md">
         <div className="container mx-auto flex items-center justify-between px-6 py-3">
           <a
             href="#hero"
@@ -132,7 +132,7 @@ export default function Header({ onLanguageChange }: HeaderProps) {
         </div>
 
         <div
-          className={`border-t border-white/10 bg-[#0b1f3a] transition-all duration-300 md:hidden ${
+          className={`border-t border-white/10 bg-[#0a0a0a] transition-all duration-300 md:hidden ${
             isMenuOpen
               ? 'max-h-80 opacity-100'
               : 'max-h-0 overflow-hidden opacity-0'
