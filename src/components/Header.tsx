@@ -64,11 +64,11 @@ export default function Header({ onLanguageChange }: HeaderProps) {
           >
             <div className="relative h-10 w-10 overflow-hidden rounded-full ring-2 ring-blue-400/60">
               <Image
-                src={asset('/Motor.jpg')}
+                src={asset('/hero.png')}
                 alt="Juan Manuel Moncayo"
                 width={40}
                 height={40}
-                className="object-cover"
+                className="object-cover object-[70%_20%]"
                 priority
               />
             </div>

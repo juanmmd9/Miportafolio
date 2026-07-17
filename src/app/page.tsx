@@ -248,30 +248,32 @@ export default function Home() {
         id="hero"
         className="relative flex min-h-screen items-end overflow-hidden pb-20 pt-28 md:items-center md:pb-0"
       >
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[#0a0a0a]">
           <Image
-            src={asset('/Motor.jpg')}
+            src={asset('/hero.png')}
             alt=""
             fill
-            className="object-cover object-center"
+            className="object-cover object-[78%_center] md:object-[72%_center]"
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/90 via-[#0a0a0a]/70 to-[#0a0a0a]/40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/35 to-transparent" />
+          {/* Mezcla blanco → negro: oscurece el fondo claro y deja la foto a la derecha */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/92 to-[#0a0a0a]/25 md:via-[#0a0a0a]/75 md:to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-[#0a0a0a]/20" />
+          <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-[#0a0a0a]/55 to-transparent md:w-1/4" />
         </div>
 
         <div className="container relative z-10 mx-auto px-6 py-10 md:py-20">
-          <div className="max-w-2xl">
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-blue-200">
+          <div className="max-w-xl md:max-w-2xl">
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-blue-300">
               {t.hero.title}
             </p>
             <h1 className="mb-6 text-4xl font-bold leading-tight text-white drop-shadow-sm md:text-5xl lg:text-6xl">
               Juan Manuel
               <br />
-              <span className="text-blue-100">Moncayo Donoso</span>
+              <span className="text-slate-100">Moncayo Donoso</span>
             </h1>
-            <p className="mb-10 max-w-lg text-lg leading-relaxed text-slate-200">
+            <p className="mb-10 max-w-lg text-lg leading-relaxed text-slate-300">
               {t.hero.subtitle}
             </p>
             <div className="flex flex-wrap gap-4">
@@ -283,7 +285,7 @@ export default function Home() {
               </a>
               <a
                 href="#contact"
-                className="rounded-lg border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/20"
+                className="rounded-lg border border-white/35 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/20"
               >
                 {t.hero.ctaContact}
               </a>
