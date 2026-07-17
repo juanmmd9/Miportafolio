@@ -62,13 +62,13 @@ export default function Header({ onLanguageChange }: HeaderProps) {
             onClick={handleNavClick}
             className="flex items-center gap-3 group"
           >
-            <div className="relative h-10 w-10 overflow-hidden rounded-full ring-2 ring-blue-400/60">
+            <div className="relative h-10 w-10 overflow-hidden rounded-full ring-2 ring-blue-400/60 bg-white">
               <Image
-                src={asset('/hero.png')}
+                src={asset('/avatar.png')}
                 alt="Juan Manuel Moncayo"
                 width={40}
                 height={40}
-                className="object-cover object-[70%_20%]"
+                className="object-cover object-center"
                 priority
               />
             </div>
